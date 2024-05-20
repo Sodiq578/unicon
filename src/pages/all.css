@@ -1,0 +1,660 @@
+/* Documents.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .label-input-group {
+    margin-bottom: 15px;
+  }
+  
+  .label-input-group label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .label-input-group input[type="text"],
+  .label-input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .label-input-group input[type="text"]::placeholder {
+    color: #999;
+  }
+  
+  .label-input-group input[type="text"]:focus,
+  .label-input-group select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .read-only-input {
+    background-color: #f9f9f9;
+  }
+  
+
+
+  /* Documents.css */
+.dropdown-content {
+  background-color: white; /* Orqa foni o'q bo'lib qolasiz */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  color: #667085;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #667085;
+}
+
+.dropdown-content a:hover {
+  background-color: #d71717;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+.add-document {
+  width: 100%;
+  max-width: 1864px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="range"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-group input[type="range"] {
+  appearance: none;
+  height: 10px;
+  background: linear-gradient(to right, #4CAF50 var(--progress), #ddd var(--progress));
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.form-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+
+
+
+
+.sections .form-group {
+  flex: 1 1 45%;
+}
+
+.animated-range {
+  --progress: 0%;
+  transition: --progress 0.3s ease-in-out;
+}
+
+
+
+.add-document {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.animated-range {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button-group {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.add-document {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.animated-range {
+  width: 100%;
+}
+
+.sections {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sections .form-group {
+  margin-bottom: 10px;
+}
+
+.sections .form-group label {
+  margin-right: 10px;
+}
+
+.section-inputs {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.section-inputs input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.section-selects select {
+  margin-right: 10px;
+}
+
+.button-group button {
+  margin-right: 10px;
+}
+
+
+/* .section {
+  margin: 20px;
+} */
+
+.form-group {
+  margin-bottom: 50px;
+}
+
+.section-row {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.section-row > * {
+  flex: 1; /* Adjust this to control the space each element takes */
+}
+
+button-group {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.add-document {
+  margin: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.section-row {
+  display: flex;
+  flex-direction: column; /* Har bir section-row ustma-ust bo'lib qoladi */
+  margin-bottom: 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.animated-range {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.sections{
+  display: flex;
+  flex-direction: column;
+}
+
+
+section{
+  display: flex;
+}
+
+
+/* Documents.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.label-input-group {
+  margin-bottom: 15px;
+}
+
+.label-input-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.label-input-group input[type="text"],
+.label-input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.label-input-group input[type="text"]::placeholder {
+  color: #999;
+}
+
+.label-input-group input[type="text"]:focus,
+.label-input-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.read-only-input {
+  background-color: #f9f9f9;
+}
+
+.dropdown-content {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  color: #667085;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #667085;
+}
+
+.dropdown-content a:hover {
+  background-color: #d71717;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.add-document {
+  width: 100%;
+  max-width: 1864px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="range"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-group input[type="range"] {
+  appearance: none;
+  height: 10px;
+  background: linear-gradient(to right, #4CAF50 var(--progress), #ddd var(--progress));
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.form-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sections .form-group {
+  flex: 1 1 45%;
+}
+
+.animated-range {
+  --progress: 0%;
+  transition: --progress 0.3s ease-in-out;
+
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.section-row {
+  display: flex;
+  flex-direction: row; /* Inputlar va selectlar yonma-yon bo'lmasin */
+  justify-content: space-between; /* Inputlar va selectlar orasida bo'sh joylar bo'lsin */
+  margin-bottom: 10px;
+}
+
+.section-row > * {
+  flex-grow: 1; /* Inputlar va selectlar bir xil o'lchamga ega bo'lsin */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Har bir input va select blok holatida chiqadi */
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+}
+
+
+select{
+  height: 44px;
+}
+
+.section-row {
+  display: flex; /* Inputlar va selectlar yonma-yon joylashadi */
+  gap: 10px; /* Elementlar orasida 10 piksel masofa bo'lishi */
+}
+
+.section-row > * {
+  width: calc(50% - 5px); /* Elementlarining o'lchami 50 foizdan 5 piksel kam */
+  margin-right: 10px; /* Elementlar orasida 10 piksel masofa bo'lishi */
+}
+
+.section-row > :last-child {
+  margin-right: 0; /* Oxirgi elementning o'ng tomondagi masofasi bo'lmasin */
+}
+
+
+@keyframes scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-range {
+  --progress: 0%;
+  transition: --progress 0.3s ease-in-out;
+  animation: scroll 2s linear infinite;
+}
+
+.add-document {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* qisqa bo'lib, modal ustunligini o'zgartirish uchun */
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px; /* kengaytirish */
+  max-width: 80%; /* o'lchamni o'zgartiring */
+  width: 500px; /* minimal o'lcham */
+  overflow-y: auto; /* agar modal content bo'lganda scroll qilingan bo'lsa */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* yo'nalish va joylashuvni ko'rsatadi */
+}
+
+.close-button {
+  background: #d71717;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 50%; /* tugish tugmachasini yuvarlashing */
+  margin-top: -10px; /* tugmachani modal ichiga joylashtirish */
+  margin-right: -10px; /* tugmachani modal ichiga joylashtirish */
+}
+
+.close-button:hover {
+  background: #ff3b3b; /* tugmachani o'chirish tugmachasining hover rangi */
+}
+
+
+.section4, .section3{
+  display: flex;
+}
+
+
+.section-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-flex div{
+  width: 650px;
+}
+
+.section-muallif{
+  display: flex;
+}
+
+/* index.css yoki mos keladigan CSS faylida */
+.section-9 {
+  display: flex;
+  gap: 10px;
+}
+
+.label-input-group-box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-9 .label-input-group {
+  gap: 20px;
+}
+
+select {
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: #FEF3F2;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-icon {
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+
+
