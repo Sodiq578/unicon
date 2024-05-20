@@ -557,29 +557,7 @@ select{
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Modal.css */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* qisqa bo'lib, modal ustunligini o'zgartirish uchun */
-}
 
-.modal {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px; /* kengaytirish */
-  max-width: 80%; /* o'lchamni o'zgartiring */
-  width: 500px; /* minimal o'lcham */
-  overflow-y: auto; /* agar modal content bo'lganda scroll qilingan bo'lsa */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* yo'nalish va joylashuvni ko'rsatadi */
-}
 
 .close-button {
   background: #d71717;
@@ -658,3 +636,296 @@ select {
 
 
 
+
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.label-input-group {
+  flex: 0 1 calc(45% - 10px);
+}
+
+.section-muallif {
+  flex-direction: column;
+}
+
+.animated-range {
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+  .section-row {
+    flex-direction: column;
+  }
+
+  .label-input-group {
+    flex: 0 1 100%;
+  }
+}
+
+
+.box-flex {
+  display: flex;
+  gap: 20px; /* This will add 20px of space between each child element */
+}
+
+.section-row {
+  display: flex;
+  gap: 20px; /* This will add 20px of space between each label-input-group within section-row */
+}
+
+
+/* Modal orqa foni */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+
+/* General styles */
+.add-document {
+  padding: 20px;
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label-input-group {
+  margin-bottom: 15px;
+}
+
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+select, input {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* opaqing background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header,
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-header h2,
+.modal-footer button {
+  margin: 0;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Inputs */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* AddDocument component layout */
+
+.add-document h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.sections {
+  margin-top: 20px;
+}
+
+.section {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label-input-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Range Input */
+.animated-range {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+.animated-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add space between buttons */
+}
+
+
+
+
+.modal-content .close-button  {
+  background: #d71717;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 50% !important;
+  position: absolute;
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+}
+
+.modal-content .close-button:hover {
+  background: #ff3b3b;
+}
+
+
+
+
+.modal-item{
+  margin: 10px 0;
+}
+
+
+
+.modal-item {
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  color: #333; /* Example color */
+}
+
+
+
+/* Additional styles for specific elements inside the modal body */

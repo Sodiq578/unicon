@@ -22,8 +22,6 @@ const AddDocument = () => {
     endTime: ""
   });
 
-
-  
   const handleSelect = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -57,12 +55,11 @@ const AddDocument = () => {
   };
 
   const handleSubmit = () => {
-    console.log("Submitted values:", values);
+    setIsModalOpen(true);
   };
 
   const handleSaveAsPDF = () => {
     const doc = new jsPDF();
-    console.log(doc)
     let y = 20;
     doc.setFont('Arial', 'normal');
     doc.setFontSize(14);
@@ -111,19 +108,15 @@ const AddDocument = () => {
     doc.text("Кўрсатув режиссёри: " + values.section9Select3 + " (имзо, Ф.И.О.)", 10, y);
 
     doc.save('dalolatnoma.pdf');
-};
-
-
-
-  const handleView = () => {
-    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
-  
+  const handleView = () => {
+    console.log("Viewing the document with values:", values);
+  };
 
   const getLabel = (key) => {
     const labels = {
@@ -166,7 +159,7 @@ const AddDocument = () => {
         {/* Bo'lim 1 */}
         <div className="form-group section">
           <h3>Tasvirga olish rejasi</h3>
-          <div className="section-row">
+          <div className="section-row box-flex">
             <div className="label-input-group">
               <label htmlFor="section1Input1">Ko’rsatuv nomini kiriting</label>
               <input
@@ -175,175 +168,184 @@ const AddDocument = () => {
                 placeholder="Input 1"
                 value={values.section1Input1}
                 onChange={handleChange}
-                
               />
             </div>
             <div className="label-input-group">
               <label htmlFor="section1Select1">Telekanalni tanlang</label>
               <select name="section1Select1" onChange={handleChange}>
-                <option value="">Yoshlar</option>
-                <option value="option1">O'zbekiston</option>
-                <option value="option2">Sport</option>
+                <option value="">Tanlang</option>
+                <option value="Yoshlar">Yoshlar</option>
+                <option value="O'zbekiston">O'zbekiston</option>
+                <option value="Sport">Sport</option>
               </select>
             </div>
-          </div>
-          <h3>Mualliflik haqi koefitsenti</h3>
-          <div className="section-row section-muallif">
             <div className="label-input-group">
               <label htmlFor="section1Select2">Bo’lim</label>
               <select name="section1Select2" onChange={handleChange}>
-                <option value="">I bo’lim</option>
-                <option value="option1">II bo’lim</option>
-                <option value="option2">III bo’lim</option>
+                <option value="">Tanlang</option>
+                <option value="I bo’lim">I bo’lim</option>
+                <option value="II bo’lim">II bo’lim</option>
+                <option value="III bo’lim">III bo’lim</option>
               </select>
             </div>
             <div className="label-input-group">
               <label htmlFor="section1Select3">Bob</label>
               <select name="section1Select3" onChange={handleChange}>
-                <option value="">II bob</option>
-                <option value="option1">III bob</option>
-                <option value="option2">IV bob</option>
+                <option value="">Tanlang</option>
+                <option value="II bob">II bob</option>
+                <option value="III bob">III bob</option>
+                <option value="IV bob">IV bob</option>
               </select>
             </div>
           </div>
         </div>
 
         {/* Bo'lim 2 */}
-        <div className="form-group section">
+        <div className="form-group section box-flex">
           <h3>Tasvirga olish vaqti</h3>
           <div className="section-row">
             <div className="label-input-group">
               <label htmlFor="section2Select1">Turkumi</label>
               <select name="section2Select1" onChange={handleChange}>
-                <option value="">Badiiy</option>
-                <option value="option1">Hujjatli</option>
-                <option value="option2">Ilmiy-ommabop</option>
+                <option value="">Tanlang</option>
+                <option value="Badiiy">Badiiy</option>
+                <option value="Hujjatli">Hujjatli</option>
+                <option value="Ilmiy-ommabop">Ilmiy-ommabop</option>
               </select>
             </div>
             <div className="label-input-group">
               <label htmlFor="section2Select2">Turi</label>
               <select name="section2Select2" onChange={handleChange}>
-                <option value="">Serial</option>
-                <option value="option1">Film</option>
-                <option value="option2">Ko'rsatuv</option>
+                <option value="">Tanlang</option>
+                <option value="Serial">Serial</option>
+                <option value="Film">Film</option>
+                <option value="Ko'rsatuv">Ko'rsatuv</option>
               </select>
             </div>
-          </div>
-          <div className="section-row">
             <div className="label-input-group">
               <label htmlFor="section2Select3">Tasvirga olish kuni</label>
               <select name="section2Select3" onChange={handleChange}>
-                <option value="">2024-01-01</option>
-                <option value="option1">2024-02-01</option>
-                <option value="option2">2024-03-01</option>
+                <option value="">Tanlang</option>
+                <option value="2024-01-01">2024-01-01</option>
+                <option value="2024-02-01">2024-02-01</option>
+                <option value="2024-03-01">2024-03-01</option>
               </select>
             </div>
             <div className="label-input-group">
               <label htmlFor="section3Select">Tasvirga olish vaqti</label>
               <select name="section3Select" onChange={handleChange}>
-                <option value="">08:00</option>
-                <option value="option1">10:00</option>
-                <option value="option2">12:00</option>
+                <option value="">Tanlang</option>
+                <option value="08:00">08:00</option>
+                <option value="10:00">10:00</option>
+                <option value="12:00">12:00</option>
               </select>
             </div>
-          </div>
-          <div className="section-row">
             <div className="label-input-group">
               <label htmlFor="endTime">Tugash vaqti</label>
               <select name="endTime" onChange={handleChange}>
-                <option value="">18:00</option>
-                <option value="option1">20:00</option>
-                <option value="option2">22:00</option>
+                <option value="">Tanlang</option>
+                <option value="18:00">18:00</option>
+                <option value="20:00">20:00</option>
+                <option value="22:00">22:00</option>
               </select>
             </div>
           </div>
         </div>
 
-        {/* Bo'lim 3 */}
-        <div className="form-group section">
-          <h3>Ko’zlangan maqsad</h3>
-          <textarea
-            name="section4Comment"
-            placeholder="Ko’zlangan maqsad haqida qisqacha yozing"
-            value={values.section4Comment}
-            onChange={handleChange}
-          />
+        <div className='box-flex'>
+          {/* Bo'lim 3 */}
+          <div className="form-group section">
+            <h3>Ko’zlangan maqsad</h3>
+            <textarea
+              name="section4Comment"
+              placeholder="Ko’zlangan maqsad haqida qisqacha yozing"
+              value={values.section4Comment}
+              onChange={handleChange}
+            />
+          </div>
+
+          {/* Bo'lim 4 */}
+          <div className="form-group section">
+            <h3>Mahsulotning mazmuni</h3>
+            <textarea
+              name="section5Comment"
+              placeholder="Mahsulotning mazmuni haqida qisqacha yozing"
+              value={values.section5Comment}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+    
+        <div className='box-flex'>
+          {/* Bo'lim 5 */}
+          <div className="form-group section">
+            <h3>Mahsulotning maqsadi</h3>
+            <textarea
+              name="section6Comment"
+              placeholder="Mahsulotning maqsadi haqida qisqacha yozing"
+              value={values.section6Comment}
+              onChange={handleChange}
+            />
+          </div>
+
+          {/* Bo'lim 6 */}
+          <div className="form-group section">
+            <h3>Tasvirga olinadigan obyektlar va hamkorlar</h3>
+            <textarea
+              name="section7Comment"
+              placeholder="Tasvirga olinadigan obyektlar va hamkorlar haqida qisqacha yozing"
+              value={values.section7Comment}
+              onChange={handleChange}
+            />
+          </div>
         </div>
 
-        {/* Bo'lim 4 */}
-        <div className="form-group section">
-          <h3>Mahsulotning mazmuni</h3>
-          <textarea
-            name="section5Comment"
-            placeholder="Mahsulotning mazmuni haqida qisqacha yozing"
-            value={values.section5Comment}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Bo'lim 5 */}
-        <div className="form-group section">
-          <h3>Mahsulotning maqsadi</h3>
-          <textarea
-            name="section6Comment"
-            placeholder="Mahsulotning maqsadi haqida qisqacha yozing"
-            value={values.section6Comment}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Bo'lim 6 */}
-        <div className="form-group section">
-          <h3>Tasvirga olinadigan obyektlar va hamkorlar</h3>
-          <textarea
-            name="section7Comment"
-            placeholder="Tasvirga olinadigan obyektlar va hamkorlar haqida qisqacha yozing"
-            value={values.section7Comment}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Bo'lim 7 */}
-        <div className="form-group section">
-          <h3>Mas’ul shaxslar</h3>
-          <div className="section-row">
-            <div className="label-input-group">
-              <label htmlFor="section9Select1">Bosh muxarrir</label>
-              <select name="section9Select1" onChange={handleChange}>
-                <option value="">Maqsudov Q.</option>
-                <option value="option1">Otabekov T.</option>
-                <option value="option2">Rahimov A.</option>
-              </select>
-            </div>
-            <div className="label-input-group">
-              <label htmlFor="section9Select2">Ko’rsatuv muallifi</label>
-              <select name="section9Select2" onChange={handleChange}>
-                <option value="">Maqsudov Q.</option>
-                <option value="option1">Otabekov T.</option>
-                <option value="option2">Rahimov A.</option>
-              </select>
-            </div>
-            <div className="label-input-group">
-              <label htmlFor="section9Select3">Ko’rsatuv rejissyori</label>
-              <select name="section9Select3" onChange={handleChange}>
-                <option value="">Maqsudov Q.</option>
-                <option value="option1">Otabekov T.</option>
-                <option value="option2">Rahimov A.</option>
-              </select>
+        <div className='box-flex'>
+          {/* Bo'lim 7 */}
+          <div className="form-group section">
+            <h3>Mas’ul shaxslar</h3>
+            <div className="section-row">
+              <div className="label-input-group">
+                <label htmlFor="section9Select1">Bosh muxarrir</label>
+                <select name="section9Select1" onChange={handleChange}>
+                  <option value="">Tanlang</option>
+                  <option value="Maqsudov Q.">Maqsudov Q.</option>
+                  <option value="Otabekov T.">Otabekov T.</option>
+                  <option value="Rahimov A.">Rahimov A.</option>
+                </select>
+              </div>
+              <div className="label-input-group">
+                <label htmlFor="section9Select2">Ko’rsatuv muallifi</label>
+                <select name="section9Select2" onChange={handleChange}>
+                  <option value="">Tanlang</option>
+                  <option value="Maqsudov Q.">Maqsudov Q.</option>
+                  <option value="Otabekov T.">Otabekov T.</option>
+                  <option value="Rahimov A.">Rahimov A.</option>
+                </select>
+              </div>
+              <div className="label-input-group">
+                <label htmlFor="section9Select3">Ko’rsatuv rejissyori</label>
+                <select name="section9Select3" onChange={handleChange}>
+                  <option value="">Tanlang</option>
+                  <option value="Maqsudov Q.">Maqsudov Q.</option>
+                  <option value="Otabekov T.">Otabekov T.</option>
+                  <option value="Rahimov A.">Rahimov A.</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="form-group">
-        <button onClick={handleSubmit}>Yaratish</button>
-        <button onClick={handleView}>Ko’rish</button>
+        <button onClick={handleSubmit}>Ko'rish</button>
         <button onClick={handleSaveAsPDF}>PDF yuklash</button>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} values={values} />
+      <Modal  isOpen={isModalOpen} onClose={handleCloseModal} values={values} getLabel={getLabel} />
     </div>
   );
 };
 
 export default AddDocument;
+
